@@ -7,7 +7,7 @@
     {COMPANY} is a shortcut to "Lato Sensu Management"
 
     {RIGHTS} is a shortcut used by trql.documentor.class.php. In general the material
-    presented here is available under the conditions of 
+    presented here is available under the conditions of
     https://creativecommons.org/licenses/by-sa/4.0/
 
     Other shortcuts exist. They exist to make it simple to change the formulation
@@ -28,7 +28,7 @@
     {*cdate                 02-03-21 18:46 *}
     {*mdate                 auto *}
     {*license               {RIGHTS} *}
-    {*UTF-8                 Quel bel été *}
+    {*UTF-8                 Quel bel Ã©tÃ© *}
 
     -------------------------------------------------------------------------------------
     Changes History:
@@ -106,10 +106,69 @@ class Module extends SoftwareSourceCode
         parent::__construct();
         $this->updateSelf( __CLASS__,'/q/common/trql.quitus.classes.home/' . basename( __FILE__,'.php' ) );
 
+        $this->addInfo( "Should create an interface for all TRQL Quitus modules" );
+
         return ( $this );
     }   /* End of Module.__construct() ================================================ */
     /* ================================================================================ */
 
+
+    /* ================================================================================ */
+    /** {{*browse()=
+
+        Browses the individual records of the module (e.g. "Browsing" invoices)
+
+        {*params
+        *}
+
+        {*return
+            (self)      The current instance of the class
+        *}
+
+        {*warning
+            TDD-oriented implementation: nothing done yet
+        *}
+
+        *}}
+    */
+    /* ================================================================================ */
+    public function browse() : string
+    /*-----------------------------*/
+    {
+        $szRetVal = '';
+
+        return ( $szRetVal ).
+    }   /* End of Module.browse() ===================================================== */
+    /* ================================================================================ */
+
+
+    /* ================================================================================ */
+    /** {{*open()=
+
+        Opens the data of the module
+
+        {*params
+        *}
+
+        {*return
+            (self)      The current instance of the class
+        *}
+
+        {*warning
+            TDD-oriented implementation: nothing done yet
+        *}
+
+        *}}
+    */
+    /* ================================================================================ */
+    public function browse() : string
+    /*-----------------------------*/
+    {
+        $szRetVal = '';
+
+        return ( $szRetVal ).
+    }   /* End of Module.browse() ===================================================== */
+    /* ================================================================================ */
 
     /* ================================================================================ */
     /** {{*__destruct()=
