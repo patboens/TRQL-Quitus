@@ -1,0 +1,23 @@
+<?php
+/****************************************************************************** */
+use \trql\vaesoli\Vaesoli           as v;
+use \trql\quitus\module\Invoices    as Invoices;
+
+$szCodeFolder = 'd:/websites/snippet-center';
+
+if ( ! defined( 'VAESOLI_CLASS_VERSION' ) )
+    require_once( $szCodeFolder . '/trql.vaesoli.class.php' );
+
+if ( ! defined( 'TRQL_QUITUS_MODULE_INVOICES_CLASS_VERSION' ) )
+    require_once( $szCodeFolder . '/TRQL-Quitus/trql.quitus.invoices.class.php' );
+
+$oInvoices = new Invoices();
+
+echo $oInvoices->open();
+echo $oInvoices->browse();
+echo $oInvoices->form();
+
+end:
+var_dump( $oInvoices->lastInfo );
+echo "end of script";
+?>
