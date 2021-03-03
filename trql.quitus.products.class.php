@@ -20,11 +20,11 @@
 */
 
 /** {{{*fheader
-    {*file                  trql.quitus.invoices.class.php *}
-    {*purpose               Invoices Module of TRQL Quitus *}
+    {*file                  trql.quitus.products.class.php *}
+    {*purpose               Products/Services Module of TRQL Quitus *}
     {*author                {PYB}, {MAT} *}
     {*company               {COMPANY} *}
-    {*cdate                 03-03-21 02:14 *}
+    {*cdate                 03-03-21 18:39 *}
     {*mdate                 auto *}
     {*license               {RIGHTS} *}
     {*UTF-8                 Quel bel été *}
@@ -34,7 +34,7 @@
     -------------------------------------------------------------------------------------
 
     {*chist
-        {*mdate 03-03-21 02:14 *}
+        {*mdate 03-03-21 18:39 *}
         {*author {PYB} *}
         {*v 8.0.0000 *}
         {*desc              1)  Original creation
@@ -54,14 +54,14 @@ if ( ! defined( 'VAESOLI_CLASS_VERSION' ) )
 if ( ! defined( 'TRQL_QUITUS_MODULE_CLASS_VERSION' ) )
     require_once( 'trql.quitus.module.class.php' );
 
-defined( 'TRQL_QUITUS_MODULE_INVOICES_CLASS_VERSION' ) or define( 'TRQL_QUITUS_MODULE_INVOICES_CLASS_VERSION','0.1' );
+defined( 'TRQL_QUITUS_MODULE_PRODUCTS_CLASS_VERSION' ) or define( 'TRQL_QUITUS_MODULE_PRODUCTS_CLASS_VERSION','0.1' );
 
 /* ==================================================================================== */
-/** {{*class Invoices=
+/** {{*class Products=
 
     {*desc
 
-        TRQL Quitus "Invoices" module
+        TRQL Quitus "Products" module
 
     *}
 
@@ -69,7 +69,7 @@ defined( 'TRQL_QUITUS_MODULE_INVOICES_CLASS_VERSION' ) or define( 'TRQL_QUITUS_M
 
  */
 /* ==================================================================================== */
-class Invoices extends Module
+class Products extends Module
 /*-------------------------*/
 {
     protected   $self = array( 'file'   => __FILE__     ,           /* {*property   $self                           (array)                         Fixed 'class' information. *} */
@@ -82,7 +82,7 @@ class Invoices extends Module
                              );
 
     /* === [Properties NOT defined in schema.org] ===================================== */
-    public      $wikidataId                     = null;             /* {*property   $wikidataId                     (string)                        Wikidata ID. NO SEARCH*} */
+    public      $wikidataId                     = null;             /* {*property   $wikidataId                     (string)                        Wikidata ID. No equivalent } */
 
 
     /* ================================================================================ */
@@ -108,14 +108,14 @@ class Invoices extends Module
         $this->updateSelf( __CLASS__,'/q/common/trql.quitus.classes.home/' . basename( __FILE__,'.php' ) );
 
         return ( $this );
-    }   /* End of Invoices.__construct() ============================================== */
+    }   /* End of Products.__construct() ============================================== */
     /* ================================================================================ */
 
 
     /* ================================================================================ */
     /** {{*browse()=
 
-        Browses the individual records of the module (e.g. "Browsing" invoices)
+        Browses the individual records of the module (e.g. "Browsing" products)
 
         {*params
         *}
@@ -137,7 +137,7 @@ class Invoices extends Module
         $szRetVal = 'browse';
 
         return ( $szRetVal );
-    }   /* End of Invoices.browse() =================================================== */
+    }   /* End of Products.browse() =================================================== */
     /* ================================================================================ */
 
 
@@ -164,7 +164,7 @@ class Invoices extends Module
         $szRetVal = 'form';
 
         return ( $szRetVal );
-    }   /* End of Invoices.form() ===================================================== */
+    }   /* End of Products.form() ===================================================== */
     /* ================================================================================ */
 
 
@@ -194,7 +194,7 @@ class Invoices extends Module
         $bRetVal = false;
 
         return ( $bRetVal );
-    }   /* End of Invoices.open() ===================================================== */
+    }   /* End of Products.open() ===================================================== */
     /* ================================================================================ */
 
 
@@ -220,7 +220,7 @@ class Invoices extends Module
         $bRetVal = false;
 
         return ( $bRetVal );
-    }   /* End of Invoices.save() ===================================================== */
+    }   /* End of Products.save() ===================================================== */
     /* ================================================================================ */
 
 
@@ -247,8 +247,8 @@ class Invoices extends Module
         $this->UIKey();
         $this->WikiData();
         $this->necroSignaling();
-    }   /* End of Invoices.__destruct() =============================================== */
+    }   /* End of Products.__destruct() =============================================== */
     /* ================================================================================ */
-}   /* End of class Invoices ========================================================== */
+}   /* End of class Products ========================================================== */
 /* ==================================================================================== */
 ?>
